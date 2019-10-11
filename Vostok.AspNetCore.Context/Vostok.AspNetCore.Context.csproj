@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  <Import Project="..\..\vostok.devtools\library-common-props\Main-Project.props" />
+  <Import Project="..\..\vostok.devtools\git-commit-to-assembly-title\Vostok.Tools.GitCommit2AssemblyTitle.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Configurations>Debug;Release</Configurations>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <VersionPrefix>0.0.1</VersionPrefix>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Title>Vostok.AspNetCore.Context</Title>
+    <Description>Middleware for restoring distributed context properties and globals</Description>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageProjectUrl>git@github.com:vostok/aspnetcore.context.git</PackageProjectUrl>
+    <PackageLicenseUrl>git@github.com:vostok/aspnetcore.context.git/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageTags>vostok vostok.aspnetcore vostok.context</PackageTags>
+    <PackageReleaseNotes>git@github.com:vostok/aspnetcore.context.git/blob/master/CHANGELOG.md</PackageReleaseNotes>
+    <RepositoryUrl>git@github.com:vostok/aspnetcore.context.git</RepositoryUrl>
+  </PropertyGroup>
+  
+</Project>

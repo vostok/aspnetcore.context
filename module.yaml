@@ -1,0 +1,17 @@
+notests *default:
+  build:
+    target: Vostok.AspNetCore.Context.sln
+    configuration: NoTests
+    tool:
+      name: dotnet
+
+  install:
+    - Vostok.AspNetCore.Context/bin/Release/netstandard2.0/Vostok.AspNetCore.Context.dll
+
+  deps:
+    - vostok.devtools
+
+full-build > notests:
+  build:
+    target: Vostok.AspNetCore.Context.sln
+    configuration: Release
