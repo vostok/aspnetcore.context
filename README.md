@@ -17,13 +17,18 @@ Add nuget package `Vostok.AspNetCore.Context`:
 Install-Package Vostok.AspNetCore.Context -ProjectName MyProject
 ```
 
-Add middleware to pipeline before all other middlewares
+Add required services and add middleware to the pipeline before all other middlewares
 ```C#
 public class Startup
 {
+  public void ConfigureServices(IServiceCollection services)
+  {
+    services.AddDistributedContext(); // registers required services
+  }
+  
   public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
   {
-    app.UseDistributedContext(); // added middleware
+    app.UseDistributedContext(); // add middleware to the pipeline
     
     // other middlewares, e.g. app.UseMvc();
   }
