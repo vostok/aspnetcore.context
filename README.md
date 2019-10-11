@@ -9,3 +9,22 @@ Middleware for restoring distributed context properties and globals from HttpCon
 **Build guide**: https://github.com/vostok/devtools/blob/master/library-dev-conventions/how-to-build-a-library.md
 
 **User documentation**: not written yet.
+
+**Usage**:
+Add nuget package `Vostok.AspNetCore.Context`:
+```powershell
+Install-Package Vostok.AspNetCore.Context -ProjectName MyProject
+```
+
+Add middleware to pipeline before all other middlewares
+```C#
+public class Startup
+{
+  public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+  {
+    app.UseDistributedContext(); // added middleware
+    
+    // other middlewares, e.g. app.UseMvc();
+  }
+}
+```
