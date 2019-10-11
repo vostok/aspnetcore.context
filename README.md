@@ -11,6 +11,7 @@ Middleware for restoring distributed context properties and globals from HttpCon
 **User documentation**: not written yet.
 
 **Usage**:
+
 Add nuget package `Vostok.AspNetCore.Context`:
 ```powershell
 Install-Package Vostok.AspNetCore.Context -ProjectName MyProject
