@@ -14,7 +14,7 @@ namespace Vostok.AspNetCore.Context
         {
             FlowingContext.RestoreDistributedProperties(context.Request.Headers[HeaderNames.ContextProperties]);
             FlowingContext.RestoreDistributedGlobals(context.Request.Headers[HeaderNames.ContextGlobals]);
-            await next(context);
+            await next(context).ConfigureAwait(false);
         }
     }
 }
